@@ -59,6 +59,7 @@ function loadEvetlisteners(){
   taskList.addEventListener('click', taskCompleted)
   taskDone.addEventListener('click', deleteTasks)
   clearToDoBtn.addEventListener('click', clearNeedToDo)
+  clearTaskCompBtn.addEventListener('click', clearTaskComp)
 }
 
 function getCompleted(){
@@ -171,11 +172,20 @@ function removeTasksFromCompLS(compItem){
 
 function clearNeedToDo(){
   if(taskList.hasChildNodes()){
-    taskList.removeChild(taskList.firstChild)
+    while(taskList.firstChild){
+      taskList.removeChild(taskList.firstChild)
+    }
   }
-  
   localStorage.clear()
 }
 
+function clearTaskComp(){
+  if(taskDone.hasChildNodes()){
+    while(taskDone.firstChild){
+      taskDone.removeChild(taskDone.firstChild)
+    }
+  }
+  localStorage.clear()
+}
 
 
