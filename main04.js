@@ -1,32 +1,32 @@
 // Practice 01
-// const form = document.querySelector('#form')
-// const taskField = document.querySelector('#taskField')
-// const taskList = document.querySelector('#taskList')
-// const taskDone = document.querySelector('#taskDone')
+const form = document.querySelector('#form')
+const taskField = document.querySelector('#taskField')
+const taskList = document.querySelector('#taskList')
+const taskDone = document.querySelector('#taskDone')
 
-// form.addEventListener('submit', textInput)
+form.addEventListener('submit', textInput)
 
-// function textInput(e){
-//   toDoList(taskField.value)
-//   e.preventDefault()
-// }
+function textInput(e){
+  toDoList(taskField.value)
+  e.preventDefault()
+}
 
-// function toDoList(x){
-//   const myHtml = `<li onclick="taskCompleted(this)">${x}</li>`
-//   taskList.insertAdjacentHTML('beforeend', myHtml)
-//   taskField.value = ''
-// }
+function toDoList(x){
+  const myHtml = `<li onclick="taskCompleted(this)">${x}</li>`
+  taskList.insertAdjacentHTML('beforeend', myHtml)
+  taskField.value = ''
+}
 
-// function taskCompleted(elm){
-//   const taskLi = taskDone.insertAdjacentElement('beforeend', elm)
-//   taskLi.removeAttribute('onclick')
-//   taskLi.setAttribute('onclick','deleteTasks(this)')
-//   console.log(taskLi)
-// }
+function taskCompleted(elm){
+  const taskLi = taskDone.insertAdjacentElement('beforeend', elm)
+  taskLi.removeAttribute('onclick')
+  taskLi.setAttribute('onclick','deleteTasks(this)')
+  console.log(taskLi)
+}
 
-// function deleteTasks(element){
-//   element.remove()
-// }
+function deleteTasks(element){
+  element.remove()
+}
 
 // practice 02
 // const form = document.querySelector('#form')
