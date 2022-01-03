@@ -537,7 +537,7 @@ const deleteTasks = delElm=>{
 
 const clearNeedToDo = ()=>{
   if(taskList.hasChildNodes){
-    while(taskList.firstChild){
+    while(taskList.firstChild){ //remove all children from an element
       taskList.removeChild(taskList.firstChild)
     }
   }
