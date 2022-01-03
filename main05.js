@@ -552,7 +552,7 @@ const clearTaskCompleted = ()=>{
 }
 
 
-const loadEventListeners = ()=>{
+const loadingEventListeners = ()=>{
   form.addEventListener('submit', taskInput)
   taskList.addEventListener('click', taskCompleted)
   taskDone.addEventListener('click', deleteTasks)
@@ -560,4 +560,4 @@ const loadEventListeners = ()=>{
   clearTaskCompletedBtn.addEventListener('click', clearTaskCompleted)
 }
 
-loadEventListeners()
+loadingEventListeners()
